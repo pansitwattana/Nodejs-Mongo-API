@@ -3,11 +3,11 @@
 // =======================
 var express     = require('express');
 var app         = express();
+var os          = require('os');
 var bodyParser  = require('body-parser');
 var morgan      = require('morgan');
 var mongoose    = require('mongoose');
 var path        = require('path');
-var os          = require('os');
 var cookieParser = require('cookie-parser')
 var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('./config'); // get our config file
