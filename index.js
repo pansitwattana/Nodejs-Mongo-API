@@ -212,6 +212,7 @@ apiRoutes.post('/user/add',function(req,res){
      name : req.body.name,
      age : req.body.age,
      email : req.body.email,
+     admin : req.body.admin
     }
     console.log(newuser)
     Users.add(newuser,function(err){
