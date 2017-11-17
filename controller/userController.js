@@ -35,7 +35,7 @@ exports.add = function(user,callback){
        name: user.name,
        email: user.email,
        age: user.age,
-       admin: 'false',
+       admin: user.admin,
        id:id
         });
        console.log(newuser)
