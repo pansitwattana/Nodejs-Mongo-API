@@ -1,0 +1,8 @@
+<% include header %>
+    <h2><%= title %></h2>
+    <ul>
+        <% users.forEach( function(user) { %>
+            <li><%= user.name %> (<%= user.age %>)</li> <% }); %>
+    </ul>
+</body>
+<% include footer %>

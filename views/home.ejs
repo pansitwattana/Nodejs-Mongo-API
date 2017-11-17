@@ -1,0 +1,32 @@
+<% include header %>
+<body>
+    <h2>Add New Customer:</h2>
+    <form method="POST" action="api/user/add/"> 
+        <label>Full Name</label><br>
+        <input type="text" name="name">
+        <br>
+        <label>Age<label><br>
+        <input type="number" name="age">
+        <br>
+        <label>Email</label><br>
+        <input type="text" name="email"> 
+        <br>
+        <label>Token</label><br>
+        <input type="text" name="token"> 
+        <br>
+        <input type="submit" value="Add">
+    </form>
+
+    <h2><%= title %></h2>
+    <ul>
+        <% users.forEach( function(user) { %>
+            <li><%= user.name %> (<%= user.age %>)
+                <form method="POST" action="/user/delete">
+                    <input type="hidden" name="id" value=<%= user.id %>>
+                    <input type="submit" value="delele"> 
+                </form>
+            
+            </li> <% }); %>
+    </ul>
+</body>
+<% include footer %>
